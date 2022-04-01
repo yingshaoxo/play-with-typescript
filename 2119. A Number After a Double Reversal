@@ -1,0 +1,23 @@
+https://leetcode.com/problems/a-number-after-a-double-reversal/
+
+
+
+Runtime: 68 ms, faster than 92.31% of TypeScript online submissions for A Number After a Double Reversal.
+
+Memory Usage: 43.7 MB, less than 19.23% of TypeScript online submissions for A Number After a Double Reversal.
+
+
+
+```typescript
+function isSameAfterReversals(num: number): boolean {
+    //8:04
+    let newNum = String(num)
+    if (newNum.length > 1) {
+        if (newNum.endsWith('0')) {
+            return false
+        }
+    }
+    return true
+    //8:05
+};
+```
