@@ -1,0 +1,26 @@
+https://leetcode.com/problems/count-number-of-pairs-with-absolute-difference-k/
+
+
+Runtime: 226 ms, faster than 6.52% of TypeScript online submissions for Count Number of Pairs With Absolute Difference K.
+
+Memory Usage: 49.3 MB, less than 8.70% of TypeScript online submissions for Count Number of Pairs With Absolute Difference K.
+
+
+```typescript
+function countKDifference(nums: number[], k: number): number {
+    //9:45
+    let counting = 0
+    for (const [index1, num1] of nums.entries()) {
+        for (const [index2, num2] of nums.entries()) {
+            if (index1 < index2) {
+                const value = Math.abs(num1 - num2)
+                if (value == k) {
+                    counting += 1
+                }
+            }
+        }
+    }
+    return counting
+    //9:47
+};
+```
